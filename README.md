@@ -1,5 +1,6 @@
 ## Task Management app
 A simple web app created to learn the basics of React.
+A mock backend using json-server was created for the using the application.
 This application was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
