@@ -10,7 +10,7 @@ function ToDoCardContainer (props) {
 
 
     return (
-        <div>
+        <div className="card-container">
             {renderCards()}
         </div>
     )

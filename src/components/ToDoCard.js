@@ -6,13 +6,31 @@ class ToDoCard extends React.Component {
         input: ''
     }
 
+    handleListInput = (event) => {
+        this.setState({
+            input: event.target.value
+        })
+    }
+
+    handleListSubmit = (event) => {
+        event.preventDefault()
+        this.props.addList(this.props.card.id, this.state.input);
+        this.setState({
+            input: ''
+        })
+    }
+
 
     render() {
         return (
-            <div className="to-do-card">
-                <h4>{this.props.card.title}</h4>
-    
+            
+            <div class="to-do-container">
+                
+                <div className="to-do-card">
+                    <span>{this.props.card.title}</span>
+                </div>
             </div>
+            
         )
     }
 }

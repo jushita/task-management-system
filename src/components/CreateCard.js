@@ -21,7 +21,7 @@ class CreateCard extends React.Component {
         
     render() {
         return (
-            <div class="card">
+            <div className="card">
 <               form onSubmit={this.handleNewCard} className="new-card-form">
                     <h4>Create Card</h4>
                     <input onChange={this.handleInput} className="new-card-input" type="text" value={this.state.input}></input>

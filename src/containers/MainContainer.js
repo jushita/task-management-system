@@ -1,7 +1,7 @@
 import React from 'react';
 import CreateCard from '../components/CreateCard';
 import ToDoCardContainer from './ToDoCardContainer'
-
+import Nav from './Nav'
 
 export default class MainContainer extends React.Component {
     API = "http://localhost:3000/cards"
@@ -41,8 +41,14 @@ export default class MainContainer extends React.Component {
     render(){
         return (
           <div className="main-container">
-            <ToDoCardContainer cards={this.state.cards} />
+            <Nav></Nav>
             <CreateCard createNewCard={this.createNewCard} />
+            <div>
+            <div>
+                <h2>Tasks Need to Be Completed</h2>
+            </div>
+            </div>
+            <ToDoCardContainer cards={this.state.cards} />
           </div>
         )
 }
