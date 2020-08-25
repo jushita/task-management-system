@@ -25,9 +25,11 @@ class ToDoCard extends React.Component {
         return (
             
             <div class="to-do-container">
-                
                 <div className="to-do-card">
                     <span>{this.props.card.title}</span>
+                    <form onSubmit={this.handleListSubmit}>
+                        <input onChange={this.handleListInput} type="text" value={this.state.input} />
+                    </form>
                 </div>
             </div>
             
