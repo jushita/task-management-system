@@ -1,40 +1,29 @@
 import React from 'react'
-
+import ToDoList from './ToDoList'
 
 class ToDoCard extends React.Component {
-    state = {
-        input: ''
-    }
 
-    handleListInput = (event) => {
-        this.setState({
-            input: event.target.value
-        })
-    }
+  state = {
+    input: ''
+  }
 
-    handleListSubmit = (event) => {
-        event.preventDefault()
-        this.props.addList(this.props.card.id, this.state.input);
-        this.setState({
-            input: ''
-        })
-    }
+  handleListInput = (event) => {
+    this.setState({
+      input: event.target.value
+    })
+  }
 
-
-    render() {
-        return (
-            
-            <div class="to-do-container">
-                <div className="to-do-card">
-                    <span>{this.props.card.title}</span>
-                    <form onSubmit={this.handleListSubmit}>
-                        <input onChange={this.handleListInput} type="text" value={this.state.input} />
-                    </form>
-                </div>
-            </div>
-            
-        )
-    }
+  
+  render(){
+    return (
+      <div className="to-do-card">
+        <h4>{this.props.card.title}</h4>
+        <form onSubmit={this.handleListSubmit}>
+          <input onChange={this.handleListInput} type="text" value ={this.state.input} />
+        </form>
+      </div>
+    )
+  }
 }
 
 
