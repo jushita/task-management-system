@@ -25,7 +25,6 @@ class ToDoCard extends React.Component {
         return (
             
             <div class="to-do-container">
-                
                 <div className="to-do-card">
                     <span>{this.props.card.title}</span>
                 </div>
