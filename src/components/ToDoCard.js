@@ -13,17 +13,18 @@ class ToDoCard extends React.Component {
     })
   }
 
-  
-  render(){
-    return (
-      <div className="to-do-card">
-        <h4>{this.props.card.title}</h4>
-        <form onSubmit={this.handleListSubmit}>
-          <input onChange={this.handleListInput} type="text" value ={this.state.input} />
-        </form>
-      </div>
-    )
-  }
+
+    render() {
+        return (
+            
+            <div class="to-do-container">
+                <div className="to-do-card">
+                    <span>{this.props.card.title}</span>
+                </div>
+            </div>
+            
+        )
+    }
 }
 
 
