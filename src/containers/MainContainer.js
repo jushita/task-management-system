@@ -1,8 +1,7 @@
 import React from 'react'
-import ToDoCard from '../components/ToDoCard'
 import CreateCard from '../components/CreateCard'
 import ToDoCardContainer from './ToDoCardContainer'
-
+import Nav from './Nav'
 
 export default class MainContainer extends React.Component {
 
@@ -126,8 +125,10 @@ export default class MainContainer extends React.Component {
   render(){
     return (
       <div className="main-container">
-        <ToDoCardContainer cards={this.state.cards} addList={this.addList} handleClickList={this.handleClickList}/>
+        <Nav></Nav>
         <CreateCard createNewCard={this.createNewCard}/>
+        <ToDoCardContainer cards={this.state.cards} addList={this.addList} handleClickList={this.handleClickList}/>
+
       </div>
     )
   }
